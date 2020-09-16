@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+option go_package=".;protoc";
+
+message GreetResponse {
+    string message = 1;
+}
+ 
+message Empty {}
+ 
+service GreeterService {
+    rpc Greet(Empty) returns (GreetResponse);
+}
+
